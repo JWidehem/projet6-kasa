@@ -1,0 +1,17 @@
+// About.scss
+
+.about {
+    .banner {
+      width: 100%;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  
