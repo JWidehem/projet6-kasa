@@ -3,11 +3,23 @@
 @import '../components/Card.scss';
 
 .home {
+  width: 100%;
+
+  .banner {
+    margin-bottom: 50px;
+  }
+
+  .cards-container {
+    background-color: #f6f6f6;
+    padding: 50px;
+    border-radius: 25px;
+    margin: 0 auto;
+  }
+
   .accommodations {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-    padding: 2rem;
-    width: 100%;
+    grid-template-columns: repeat(auto-fit, 340px);
+    gap: 90px;
+    justify-content: center;
   }
 }

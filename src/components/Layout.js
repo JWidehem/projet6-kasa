@@ -10,7 +10,6 @@ const Layout = ({ children }) => (
       </div>
       <nav>
         <Link to="/">Accueil</Link>
-        {" | "}
         <Link to="/about">À propos</Link>
       </nav>
     </header>
@@ -18,6 +17,9 @@ const Layout = ({ children }) => (
       {children}
     </main>
     <footer className="footer">
+      <div className="footer-logo">
+        <img src="/logo-blanc.png" alt="Kasa Logo" />
+      </div>
       <p>© 2024 Kasa. Tous droits réservés.</p>
     </footer>
   </div>
