@@ -1,0 +1,44 @@
+@import '../styles/variables';
+
+.layout {
+  font-family: $font-family;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: $secondary-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+
+  .logo img {
+    height: 40px;
+  }
+
+  nav a {
+    color: $primary-color;
+    margin: 0 1rem;
+    text-decoration: none;
+  }
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer {
+  background-color: $primary-color;
+  color: $secondary-color;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
