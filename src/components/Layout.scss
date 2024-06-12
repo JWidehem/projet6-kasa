@@ -15,7 +15,7 @@
   padding: 1rem 2rem;
 
   .logo img {
-    height: 68px;
+    padding: 20px;
   }
 
   nav a {
@@ -68,9 +68,9 @@
   position: relative;
   bottom: 0;
 
-.footer-logo img {
-  height: 40px;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  .footer-logo img {
+    height: 40px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
   }
 }

@@ -1,81 +1,95 @@
 // Accommodation.scss
 
 .accommodation {
-    .accommodation-details {
-      display: flex;
-      justify-content: space-between;
-      margin: 20px 0;
-  
-      .accommodation-info {
-        flex: 1;
-  
-        h1 {
-          font-size: 24px;
-          margin-bottom: 10px;
-        }
-  
-        p {
-          color: #717171;
-          margin-bottom: 10px;
-        }
-  
-        .tags {
-          display: flex;
-          gap: 10px;
-          margin-top: 10px;
-  
-          .tag {
-            background-color: #ff6060;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 12px;
-          }
-        }
+  width: 100%;
+
+  .slideshow {
+    width: 100%;
+  }
+
+  .accommodation-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+
+    .accommodation-info {
+      flex: 1;
+
+      h1 {
+        font-size: 36px;
+        font-weight: 500;
+        color: #ff6060;
+        margin-bottom: 10px;
       }
-  
-      .host-info {
+
+      p {
+        color: black;
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .tags {
         display: flex;
-        align-items: center;
-        gap: 20px;
-  
-        .host {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-  
-          p {
-            font-weight: bold;
-          }
-  
-          .host-picture {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-          }
-        }
-  
-        .rating {
-          display: flex;
-  
-          span {
-            font-size: 24px;
-            color: #ff6060;
-  
-            &.filled {
-              color: #ff6060;
-            }
-          }
+        gap: 10px;
+        margin-top: 10px;
+
+        .tag {
+          background-color: #ff6060;
+          color: white;
+          padding: 10px 20px;
+          border-radius: 15px;
+          font-size: 14px;
+          font-weight: 700;
         }
       }
     }
-  
-    .collapse-section {
-      margin-top: 20px;
-  
-      .collapse {
-        margin-bottom: 20px;
+
+    .host-info {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .host {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        p {
+          font-weight: bold;
+        }
+
+        .host-picture {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+        }
+      }
+
+      .rating {
+        display: flex;
+
+        span {
+          font-size: 24px;
+          color: #ff6060;
+
+          &.filled {
+            color: #ff6060;
+          }
+        }
       }
     }
   }
-  
+
+  .collapse-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+
+    .collapse {
+      width: 50%;
+    }
+  }
+}
