@@ -6,7 +6,9 @@ const Layout = ({ children }) => (
   <div className="layout">
     <header className="header">
       <div className="logo">
-        <img src="/logo.png" alt="Kasa Logo" />
+        <Link to="/">
+          <img src="/logo.png" alt="Kasa Logo" />
+        </Link>
       </div>
       <nav>
         <Link to="/">Accueil</Link>

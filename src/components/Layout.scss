@@ -16,6 +16,10 @@
 
   .logo img {
     padding: 20px;
+
+    @media (max-width: 430px) {
+      padding: 0;
+    }
   }
 
   nav a {
@@ -27,9 +31,14 @@
     position: relative;
     margin-right: 50px;
 
+    @media (max-width: 430px) {
+      margin-right: 0;
+      font-size: 18px;
+    }
+
     &:hover,
     &.active {
-      color: #ff6060;
+      color: $primary-color;
     }
 
     &::after {
@@ -58,6 +67,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 430px) {
+    padding: 5px;
+  }
 }
 
 .footer {

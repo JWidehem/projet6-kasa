@@ -1,4 +1,4 @@
-// Accommodation.scss
+@import '../styles/variables';
 
 .accommodation {
   width: 100%;
@@ -12,14 +12,22 @@
     justify-content: space-between;
     margin: 20px 0;
 
+    @media (max-width: 430px) {
+      flex-direction: column;
+    }
+
     .accommodation-info {
       flex: 1;
 
       h1 {
         font-size: 36px;
         font-weight: 500;
-        color: #ff6060;
+        color: $primary-color;
         margin-bottom: 10px;
+
+        @media (max-width: 430px) {
+          font-size: 24px;
+        }
       }
 
       p {
@@ -27,6 +35,10 @@
         margin-bottom: 20px;
         font-size: 18px;
         font-weight: 500;
+
+        @media (max-width: 430px) {
+          font-size: 14px;
+        }
       }
 
       .tags {
@@ -35,12 +47,17 @@
         margin-top: 10px;
 
         .tag {
-          background-color: #ff6060;
-          color: white;
+          background-color: $primary-color;
+          color: $secondary-color;
           padding: 10px 20px;
           border-radius: 15px;
           font-size: 14px;
           font-weight: 700;
+
+          @media (max-width: 430px) {
+            font-size: 12px;
+            padding: 5px 10px;
+          }
         }
       }
     }
@@ -50,6 +67,10 @@
       align-items: center;
       gap: 20px;
 
+      @media (max-width: 430px) {
+        margin-top: 20px;
+      }
+
       .host {
         display: flex;
         align-items: center;
@@ -57,12 +78,21 @@
 
         p {
           font-weight: bold;
+
+          @media (max-width: 430px) {
+            font-size: 14px;
+          }
         }
 
         .host-picture {
           width: 50px;
           height: 50px;
           border-radius: 50%;
+
+          @media (max-width: 430px) {
+            width: 30px;
+            height: 30px;
+          }
         }
       }
 
@@ -71,10 +101,14 @@
 
         span {
           font-size: 24px;
-          color: #ff6060;
+          color: $primary-color;
 
           &.filled {
-            color: #ff6060;
+            color: $primary-color;
+          }
+
+          @media (max-width: 430px) {
+            font-size: 18px;
           }
         }
       }
@@ -88,8 +122,17 @@
     margin-top: 20px;
     width: 100%;
 
+    @media (max-width: 430px) {
+      flex-direction: column;
+      gap: 10px;
+    }
+
     .collapse {
       width: 50%;
+
+      @media (max-width: 430px) {
+        width: 100%;
+      }
     }
   }
 }

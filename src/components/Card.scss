@@ -1,14 +1,16 @@
-// Card.scss
+@import '../styles/variables';
 
 .card {
-  background-color: #ff6060;
-  color: white;
+  background-color: transparent;
+  color: $secondary-color;
   padding: 0;
   border-radius: 8px;
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  width: 340px;
-  height: 340px;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
   overflow: hidden;
   position: relative;
   text-decoration: none;
@@ -16,30 +18,50 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: 3px solid gray;
 
+  @media (min-width: 1440px) {
+    width: 340px;
+    height: 340px;
+  }
+
   &:hover {
     transform: translateY(-5px);
   }
 
   .card-content {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100%;
-    position: relative;
+
+    @media (max-width: 430px) {
+      height: auto;
+    }
   }
 
   img {
     width: 100%;
-    height: 100%;
+    flex-grow: 1;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
+
+    @media (max-width: 430px) {
+      height: auto;
+      border-radius: 0;
+    }
+
+    @media (min-width: 1440px) {
+      height: calc(100% - 40px);
+      border-radius: 8px 8px 0 0;
+    }
   }
 
   .card-title {
-    position: absolute;
+    position: absolute; /* Positionnement absolu pour superposer sur l'image */
     bottom: 0;
     left: 0;
     width: 100%;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
+    color: $secondary-color;
+    background-color: rgba(0, 0, 0, 0.5); /* Utiliser un fond semi-transparent pour la lisibilité */
     padding: 10px;
     font-size: 16px;
     font-weight: bold;
@@ -48,5 +70,11 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    z-index: 1;
+
+    @media (max-width: 430px) {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.5); /* Utiliser un fond semi-transparent pour la lisibilité */
+    }
   }
 }
