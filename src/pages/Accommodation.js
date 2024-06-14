@@ -13,6 +13,8 @@ const Accommodation = () => {
     return <Navigate to="/404" replace />;
   }
 
+  const rating = 4; // Assurer que seulement 4 étoiles sont pleines
+
   return (
     <div className="accommodation">
       <Slideshow pictures={accommodation.pictures} />
@@ -26,15 +28,17 @@ const Accommodation = () => {
             ))}
           </div>
         </div>
-        <div className="host-info">
-          <div className="host">
-            <p>{accommodation.host.name}</p>
-            <img src={accommodation.host.picture} alt={accommodation.host.name} className="host-picture" />
-          </div>
-          <div className="rating">
-            {Array.from({ length: 5 }, (_, index) => (
-              <span key={index} className={index < accommodation.rating ? 'filled' : ''}>★</span>
-            ))}
+        <div className="host-info-container">
+          <div className="host-info">
+            <div className="rating">
+              {Array.from({ length: 5 }, (_, index) => (
+                <span key={index} className={index < rating ? 'filled' : 'empty'}>★</span>
+              ))}
+            </div>
+            <div className="host">
+              <p>{accommodation.host.name}</p>
+              <img src={accommodation.host.picture} alt={accommodation.host.name} className="host-picture" />
+            </div>
           </div>
         </div>
       </div>
